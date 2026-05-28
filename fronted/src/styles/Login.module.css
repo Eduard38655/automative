@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  /* Light Theme (Slate Horizon Light) */
+  --light-bg: #f8f9ff;
+  --light-surface: #ffffff;
+  --light-surface-container: #eff4ff;
+  --light-primary: #00488d;
+  --light-primary-container: #d6e3ff;
+  --light-on-primary: #ffffff;
+  --light-secondary: #475569;
+  --light-text-primary: #0f172a;
+  --light-text-secondary: #64748b;
+  --light-border: #e2e8f0;
+  --light-accent-blue: #3b82f6;
+  --light-success: #10b981;
+  --light-warning: #f59e0b;
+  --light-error: #ef4444;
+  --light-info: #0ea5e9;
+
+  /* Dark Theme (Slate Horizon Dark) */
+  --dark-bg: #0f172a;
+  --dark-surface: #1e293b;
+  --dark-surface-container: #1e293b;
+  --dark-primary: #3b82f6;
+  --dark-primary-container: #1e3a8a;
+  --dark-on-primary: #ffffff;
+  --dark-secondary: #94a3b8;
+  --dark-text-primary: #f8fafc;
+  --dark-text-secondary: #94a3b8;
+  --dark-border: #334155;
+  --dark-accent-blue: #60a5fa;
+  --dark-success: #34d399;
+  --dark-warning: #fbbf24;
+  --dark-error: #f87171;
+  --dark-info: #38bdf8;
+}
+
+.Login_main_Container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #1a3a4a, #2a5a7a);
+}
+.aside_Container {
+  width: 32%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+  justify-content: space-around;
+  border-top: 10px solid var(--light-primary);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.aside_Container_header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  align-items: center;
+}
+
+.logo_Div {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-primary-container);
+  border-radius: 5px;
+  padding: 5px;
+}
+.logo_Div i {
+  font-size: 30px;
+  color: var(--light-primary);
+}
+.Logo_Text {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+  align-items: center;
+  color: var(--light-on-primary);
+}
+.Logo_Text h3 {
+  font-weight: 750;
+  font-size: 1.3rem;
+  color: var(--dark-surface-container);
+}
+.Logo_Text small {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--dark-text-secondary);
+}
+
+.aside_Container form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.aside_Container form .formGroup {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.Div_Input {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  position: relative;
+}
+.Div_Input div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+  border: 1px solid var(--light-border);
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 15px;
+  background: #eff4ff;
+}
+.Div_Input input {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  font-weight: 550;
+}
+.Div_Input div:hover {
+  border-color: var(--light-primary);
+}
+
+.Div_Input div i {
+  font-size: 20px;
+  color: var(--light-text-secondary);
+}
+
+.aside_Container form .formGroup .Div_Input label {
+  font-size: 0.8rem;
+  font-weight: 550;
+  color: var(--light-text-primary);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.aside_Container form .formGroup .Div_Input small {
+  font-size: 0.7rem;
+  font-weight: 550;
+  color: var(--light-error);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+.Div_Input span {
+  font-size: 0.7rem;
+  font-weight: 550;
+  color: var(--light-error);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+.Div_CheckBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: flex-start;
+  align-items: center;
+}
+.Div_CheckBox label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.aside_Container button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--light-primary);
+  color: var(--light-on-primary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+}
+.aside_Container button i {
+  font-size: 1.2rem;
+  color: var(--light-on-primary);
+  margin-left: 10px;
+}
+
+.aside_Container button:disabled {
+  background-color: var(--light-primary-container);
+  cursor: not-allowed;
+}
+.aside_Container button:hover {
+  background-color: var(--light-primary-container);
+}
+.aside_Container_footer_line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--dark-secondary);
+}
+.aside_Container_footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--light-text-secondary);
+  font-weight: 600;
+}
+.aside_Container_footer p {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  color: var(--light-text-secondary);
+  font-weight: 600;
+  font-size: 1rem;
+
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.aside_Container_footer small {
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--light-text-secondary);
+  font-weight: 600;
+}
+.dot {
+  background-color: var(--light-accent-blue);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}

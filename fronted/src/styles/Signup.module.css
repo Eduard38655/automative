@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  /* Light Theme (Slate Horizon Light) */
+  --light-bg: #f8f9ff;
+  --light-surface: #ffffff;
+  --light-surface-container: #eff4ff;
+  --light-primary: #00488d;
+  --light-primary-container: #d6e3ff;
+  --light-on-primary: #ffffff;
+  --light-secondary: #475569;
+  --light-text-primary: #0f172a;
+  --light-text-secondary: #64748b;
+  --light-border: #e2e8f0;
+  --light-accent-blue: #3b82f6;
+  --light-success: #10b981;
+  --light-warning: #f59e0b;
+  --light-error: #ef4444;
+  --light-info: #0ea5e9;
+
+  /* Dark Theme (Slate Horizon Dark) */
+  --dark-bg: #0f172a;
+  --dark-surface: #1e293b;
+  --dark-surface-container: #1e293b;
+  --dark-primary: #3b82f6;
+  --dark-primary-container: #1e3a8a;
+  --dark-on-primary: #ffffff;
+  --dark-secondary: #94a3b8;
+  --dark-text-primary: #f8fafc;
+  --dark-text-secondary: #94a3b8;
+  --dark-border: #334155;
+  --dark-accent-blue: #60a5fa;
+  --dark-success: #34d399;
+  --dark-warning: #fbbf24;
+  --dark-error: #f87171;
+  --dark-info: #38bdf8;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--light-bg);
+}
+
+.main_Container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_Container_article {
+  width: 60%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.main_Container_image {
+  width: 45%;
+  height: 100%;
+  background-image: url("../../public/singup.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: var(--light-on-primary);
+  gap: 5px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.main_Container_image p {
+  font-size: 0.8rem;
+  color: var(--light-text-secondary);
+  font-weight: 600;
+}
+.main_Container_image h3 {
+  font-size: 1.5rem;
+  color: var(--light-on-primary);
+}
+.main_Container_image h4 {
+  font-size: 1rem;
+  color: var(--light-on-primary);
+}
+.aside_Container {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 20px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: var(--light-surface);
+  border: 1px solid var(--light-border);
+}
+
+.aside_Container form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  gap: 20px;
+}
+.aside_Container_header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+}
+
+.aside_Container_header h2 {
+  font-size: 1.9rem;
+  font-weight: 650;
+  color: var(--light-text-primary);
+}
+.aside_Container_header p {
+  font-size: 0.9rem;
+  color: var(--light-text-secondary);
+  font-weight: 550;
+}
+.formGroup {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+form div {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  font-size: 0.8rem;
+  color: var(--light-text-secondary);
+  font-weight: 600;
+}
+form span {
+  font-size: 0.7rem;
+  color: var(--light-error);
+}
+.aside_Container form div input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid var(--light-border);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.aside_Container form div {
+  gap: 5px;
+}
+.aside_Container form button {
+  width: 100%;
+  height: 45px;
+  background-color: var(--light-primary);
+  color: var(--light-on-primary);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid var(--light-border);
+}
+.aside_Container form button i {
+  margin-left: 5px;
+}
+
+.aside_Container_footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--dark-text-secondary);
+}
+.aside_Container_footer a {
+  color: var(--light-primary);
+  text-decoration: none;
+}
+.aside_Container_footer a:hover {
+  text-decoration: underline;
+}
+
+/**/
+.aside_Role_details{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--dark-text-secondary);
+ 
+}
+.aside_Role_header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 20px;
+}
+.aside_Role_header button {
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  border: none;
+  color: var(--light-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.aside_Role_header h2 {
+  font-size: 1.5rem;
+  font-weight: 650;
+  color: var(--light-text-primary);
+}
+.aside_Role_header p {
+  font-size: 0.9rem;
+  color: var(--light-text-secondary);
+  font-weight: 550;
+}
+
+.aside_permissions_Container_details {
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.aside_Role_Container_details {
+  width: 100%;
+  height: auto;
+  display: grid;
+  overflow: hidden;
+  overflow-y: scroll;
+   
+}
+
+/* Barra completa */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Barra que se mueve */
+::-webkit-scrollbar-thumb {
+  background: var(--dark-surface);
+  border-radius: 10px;
+}
+
+/* Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0097a7;
+}
+
+.aside_Role_Container,
+.aside_permissions_Container {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  
+ 
+}
+
+.aside_permissions_Container div {
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+}
+.aside_Role_Container_details div {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto;
+  
+}
+.aside_permissions_Container div button {
+  width: auto;
+  height: 40px;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 550;
+  padding: 10px;
+  
+}
+
+.aside_permissions_Container_details div .inactive_permission, .aside_Role_Container_details  div .inactive_role {
+  background-color: var(--light-primary-container);
+  color: var(--dark-bg);
+
+  border: 1px solid var(--dark-border);
+}
+
+ 
+.aside_permissions_Container_details div .active_permission ,.aside_Role_Container_details div .active_role  {
+  border: 1px solid var(--light-primary);
+  background-color: var(--light-surface-container);
+} 
+
+.article_Permissions_Container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between
+}
+.article_Permissions_Container button {
+  width: auto;
+  height: 30px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 550;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.article_Permissions_Container label {
+  font-size: 0.8rem;
+  color: var(--light-text-secondary);
+  font-weight: 600;
+}
+.article_Permissions_Container span {
+  font-size: 0.7rem;
+  color: var(--light-error);
+}
+.article_Permissions_Container div input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid var(--light-border);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.article_Permissions_Container div {
+  gap: 5px;
+}
+
+.article_Permissions_Container .submit_button {
+  width: 100%;
+  height: 45px;
+  background-color: var(--light-primary);
+  color: var(--light-on-primary);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
