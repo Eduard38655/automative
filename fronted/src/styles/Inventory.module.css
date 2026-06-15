@@ -603,3 +603,11 @@ img {
   text-align: center;
   font-weight: 600;
 }
+
+@media (max-width: 768px) {
+  .card_Container {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+ 

@@ -5,7 +5,8 @@ function useGetCardDetails({
   setFilteredCars,
   Cars,
   FindCard,
-    
+  Backup, setBackup
+
 }) {
 
   useEffect(() => {
@@ -30,7 +31,7 @@ function useGetCardDetails({
 
           // TODOS LOS CARROS
           setFilteredCars(result.data);
- 
+          setBackup(result.data)
           // PRIMERA PAGINA
           setCars(result.data.slice(0, 2));
 

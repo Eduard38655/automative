@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-function CarSales({salesOverview, setSalesOverview}) {
+function CarSales({ salesOverview, setSalesOverview }) {
 
- const [salesCard, setSalesCard] = useState([]);
-
- 
- useEffect(() => {
-const sortedSales =salesOverview.sort((a, b) => b.sales - a.sales);
+  const [salesCard, setSalesCard] = useState([]);
 
 
- },[salesOverview])
-  return (<> 
-  
+  useEffect(() => {
+    const sortedSales = salesOverview.sort((a, b) => b.sales - a.sales);
+    console.log(sortedSales);
+
+  }, [salesOverview])
+  return (<>
+
   </>)
 }
 

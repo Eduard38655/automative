@@ -7,20 +7,21 @@ import SideBarMenu from "../Components/OthersComp/SideBarMenu.jsx"
 import useGetCardDetails from "../hooks/GetCardDetails"
 import styles from "../styles/Inventory.module.css"
 function InventoryPage() {
-  const [Cars, setCars] = useState([])
-
+    const [Cars, setCars] = useState([])
+    const [Backup, setBackup] = useState([])
     /* TODOS LOS CARROS */
     const [FilteredCars, setFilteredCars] = useState([])
     useGetCardDetails({
-    setCars,
-    setFilteredCars,
-    Cars
-  });
+        setCars,
+        setFilteredCars,
+        Cars,
+        Backup, setBackup
+    });
 
     /* CARROS VISIBLES */
-   
 
-    
+
+
     return (
 
         <main className={styles.main_Container_Inventory}>
@@ -57,11 +58,15 @@ function InventoryPage() {
                         <FilterCards
                             Cars={FilteredCars}
                             setCars={setFilteredCars}
-                            
+                            Backup={Backup} setBackup={setBackup}
+
                         />
 
                         <CardsContent
                             Cars={Cars}
+                             setCars={setFilteredCars}
+                            Backup={Backup} 
+                            setBackup={setBackup}
                         />
 
                     </div>

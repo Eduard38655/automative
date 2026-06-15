@@ -291,3 +291,18 @@
   height: 8px;
   border-radius: 50%;
 }
+
+
+@media (max-width: 768px) {
+  .Login_main_Container {
+    background: linear-gradient(to bottom, #1a3a4a, #2a5a7a);
+    padding: 20px;
+  }
+  .aside_Container {
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    border-top: 10px solid var(--light-primary);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+}

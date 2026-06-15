@@ -2,9 +2,11 @@ import express from "express";
 import prisma from "../../../lib/prismadb.js";
 import { verifyToken } from "../../middlewares/Token.auth.js";
 const router = express.Router();
-
 router.get("/GetAllSales", verifyToken, async (req, res) => {
   try {
+    const token = req.cookies.token;
+
+  console.log("Token from cookie:", token);
     const salesData = await prisma.sales.findMany({
       include: {
         customers: true,

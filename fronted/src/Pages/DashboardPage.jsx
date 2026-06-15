@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import CarSales from "../Components/DashboardComp/CarSales";
 import SideBarMenu from "../Components/OthersComp/SideBarMenu";
 
 function DashboardPage(params) {
@@ -13,18 +12,19 @@ function DashboardPage(params) {
                     `${import.meta.env.VITE_API_URL}/api/v1/sales/GetAllSales`,
                     {
                         method: "GET",
-                        credentials: "include",
+
                         headers: {
                             "Content-Type": "application/json",
                         },
+                        include: "include", // Include cookies in the request
+                        credentials: "include", // Include cookies in the request
                     }
                 );
-
                 const result = await response.json();
-
+                console.log(result, "ss");
                 if (result.ok) {
                     setSalesOverview(result.data);
-                    
+
                 }
             } catch (error) {
                 console.log(error);
@@ -38,7 +38,7 @@ function DashboardPage(params) {
 
     return (<main>
         <SideBarMenu />
-        <CarSales salesOverview={salesOverview} setSalesOverview={setSalesOverview} />
+        {/*<CarSales salesOverview={salesOverview} setSalesOverview={setSalesOverview} />*/}
     </main>)
 }
 

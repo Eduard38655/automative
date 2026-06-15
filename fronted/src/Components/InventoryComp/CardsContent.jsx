@@ -1,10 +1,10 @@
-import styles from "../../styles/Inventory.module.css";
 import { useEffect } from "react";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import styles from "../../styles/Inventory.module.css";
 const formatPrice = (price) =>
   new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price);
 
-function CarCard({ car, vehicle }) {
+function CarCard({ car, vehicle,Backup, setBackup }) {
   const navigate = useNavigate()
   const primaryImage = vehicle.vehicle_images?.find((img) => img.is_primary);
 
@@ -70,16 +70,16 @@ function CarCard({ car, vehicle }) {
   );
 }
 
-function CardsContent({ Cars = [] }) {
+function CardsContent({ Backup = [] }) {
   return (
     <article className={styles.card_Container}>
-      {Cars.map((car) =>
+      {Backup.map((car) =>
         car.vehicles?.map((vehicle) => (
           <CarCard
             key={vehicle.id}
             car={car}
             vehicle={vehicle}
-             
+            
           />
         ))
       )}

@@ -12,17 +12,17 @@ function LoginComp(params) {
         setIsSubmitting(true);
         try {
 
-            
+
             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/auth/login`, {
                 method: "POST",
-                credentials: "include",
                 headers: {
                     "Content-Type": "application/json",
-                },
+                }, credentials: "include",
                 body: JSON.stringify({
                     email: data.email,
                     password: data.password
                 }),
+
             })
 
             const result = await response.json()
